@@ -11,7 +11,8 @@ contract Crossmint is ERC721, Ownable {
     uint256 public constant MAX_SUPPLY = 100000;
     uint256 public salePrice = 0.001 ether;
     uint256 public totalSupply;
-    string public uri;
+    string public uri =
+        "https://gateway.pinata.cloud/ipfs/QmPux5QgyPHfxjuCBf1GL6bnbYRoDdzwh9UGdnz2UXx58D";
 
     address _crossmintAddress = 0xdAb1a1854214684acE522439684a145E62505233;
 
@@ -27,9 +28,7 @@ contract Crossmint is ERC721, Ownable {
         _;
     }
 
-    constructor() payable ERC721("tester", "TEST") {
-        uri = "https://gateway.pinata.cloud/ipfs/QmPux5QgyPHfxjuCBf1GL6bnbYRoDdzwh9UGdnz2UXx58D";
-    }
+    constructor() payable ERC721("Crossmint Testing NFT", "XMTEST") {}
 
     // PUBLIC
 
